@@ -3,12 +3,12 @@
 **AI voice front desk & Grok-traceable triage inbox for UK residential property management.**
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-grok--realestate--hackathon.vercel.app-0ea5e9?style=flat-square&logo=vercel)](https://grok-realestate-hackathon.vercel.app)
-[![Track 4](https://img.shields.io/badge/Hackathon-Track%204%20%C2%B7%20Property%20Management-111827?style=flat-square)](./DEMO_GUIDE.md)
+![Track 4](https://img.shields.io/badge/Hackathon-Track%204%20%C2%B7%20Property%20Management-111827?style=flat-square)
 [![xAI Grok](https://img.shields.io/badge/xAI-grok--4.20--0309--non--reasoning-000000?style=flat-square)](https://x.ai)
 [![Supabase](https://img.shields.io/badge/Supabase-Postgres%20%2B%20Realtime%20%2B%20Edge-3ecf8e?style=flat-square&logo=supabase&logoColor=white)](https://supabase.com)
 [![React 19](https://img.shields.io/badge/React-19%20%C2%B7%20TypeScript%20%C2%B7%20Tailwind%20v4-38bdf8?style=flat-square&logo=react&logoColor=white)](https://react.dev)
 
-> **Live App:** [https://grok-realestate-hackathon.vercel.app](https://grok-realestate-hackathon.vercel.app) · **Stage Script & Judge Q&A:** [`DEMO_GUIDE.md`](./DEMO_GUIDE.md)
+> **Live App:** [https://grok-realestate-hackathon.vercel.app](https://grok-realestate-hackathon.vercel.app)
 
 ---
 
@@ -84,7 +84,6 @@ flowchart TB
 
 ```text
 .
-├── DEMO_GUIDE.md                         # 2-minute stage script, demo flow & judge Q&A
 ├── README.md                             # Project overview, architecture & repository map
 ├── .env.example                          # Safe environment variable template
 ├── .cursor/mcp.json.example              # MCP server template (Supabase, Parallel, Cognee)
@@ -123,6 +122,6 @@ flowchart TB
 
 ## Hackathon Context & Security Note
 
-- **Hackathon:** Built for **Track 4 — Asset and Property Management** at the **Grok Bot Real Estate Hackathon London** (`EXL-1/Line-Inbox`). See [`DEMO_GUIDE.md`](./DEMO_GUIDE.md) for the 2-minute stage script and judge Q&A.
+- **Hackathon:** Built for **Track 4 — Asset and Property Management** at the **Grok Bot Real Estate Hackathon London** (`EXL-1/Line-Inbox`).
 - **Security & Secret Hygiene:** Runtime keys (`XAI_API_KEY`, `VAPI_WEBHOOK_SECRET`, `COGNEE_API_KEY`, `COGNEE_BASE_URL`) are loaded server-side via Supabase Vault (`line_runtime_secret`) or Edge Function secrets; `.env`, `.env.local`, `.cursor/mcp.json`, `data/`, and `backups/` are excluded from version control (`.env.example` and `.cursor/mcp.json.example` provide safe templates).
 
