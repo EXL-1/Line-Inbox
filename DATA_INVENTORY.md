@@ -8,7 +8,7 @@ Updated: 2026-11-11 (after Mac Downloads import + Parallel key fix).
 
 | Local (Mac) | Remote (`wckd`) |
 |-------------|-----------------|
-| `/Users/lmalik/Documents/Hackathon/data/` | `/mnt/ai-vault/hackathon-data/` → `~/grok-realestate-hackathon/data` |
+| `./data/` | `/mnt/ai-vault/hackathon-data/` → `~/grok-realestate-hackathon/data` |
 
 ---
 
@@ -95,7 +95,7 @@ Example case: `005` — Check-Out Cleaning (agency manager workflow with cleanin
 | Key / service | Result |
 |---------------|--------|
 | `XAI_API_KEY` | 200 (`GET /v1/models`) |
-| `PARALLEL_API_KEY` | 200 (`POST /v1beta/search`) — key corrected (`OdHms`) |
+| `PARALLEL_API_KEY` | 200 (`POST /v1beta/search`) — verified |
 | `SUPABASE_URL` | 200 (`/auth/v1/health`) |
 | `COGNEE_API_KEY` | 200 (`/health`) |
 

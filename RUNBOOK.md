@@ -4,9 +4,9 @@ Sanitized (no API keys). Stored on `wckd` for team kickoff.
 
 ## Hosts
 
-- **Mac cockpit:** `/Users/lmalik/Documents/Hackathon`
-- **GPU rig `wckd`:** `lucas@10.24.0.164` / `lucas@wckd.lan`
-  - Project: `/home/lucas/grok-realestate-hackathon`
+- **Mac cockpit:** `./` (local repo root)
+- **GPU rig `wckd`:** `<user>@<gpu-host>`
+  - Project: `~/grok-realestate-hackathon`
   - Data: `/mnt/ai-vault/hackathon-data` ← symlinked as `~/grok-realestate-hackathon/data`
   - Memory store: `/mnt/ai-vault/hackathon-memory/`
 - SSH config Host `wckd` → User `lucas`, IdentityFile `~/.ssh/id_ed25519`
@@ -32,7 +32,7 @@ Sanitized (no API keys). Stored on `wckd` for team kickoff.
 
 ## MCP (Cursor on Mac)
 
-- Supabase → Real-Estate-Hack / EXL-1 (`btyldznsqoohztewbrpv`)
+- Supabase → Real-Estate-Hack (`<project-ref>`)
 - Parallel → `https://mcp.parallel.ai/mcp` (+ API key in `.env`)
 - Cognee Cloud → `uvx cognee-mcp@0.5.6` with tenant URL in mcp.json
 
