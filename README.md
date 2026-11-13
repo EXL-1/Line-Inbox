@@ -80,44 +80,12 @@ flowchart TB
 
 ---
 
-## Quick Start
-
-> **Security note:** Never commit `.env`, `.env.local`, `.cursor/mcp.json`, `data/`, or `backups/`. Always start from `.env.example`.
-
-1. **Copy the environment template:**
-   ```bash
-   cp .env.example .env
-   ```
-   Set the frontend variables in `.env`:
-   - `VITE_SUPABASE_URL`
-   - `VITE_SUPABASE_ANON_KEY`
-   - Optional for live browser calls: `VITE_VAPI_PUBLIC_KEY`, `VITE_VAPI_ASSISTANT_ID`
-
-   Configure backend runtime secrets in **Supabase Vault** (consumed by `line_runtime_secret`) or **Supabase Edge Function secrets**:
-   - `XAI_API_KEY`
-   - `VAPI_WEBHOOK_SECRET`
-   - `COGNEE_API_KEY`, `COGNEE_BASE_URL`
-
-2. **Install dependencies and run locally:**
-   ```bash
-   npm install
-   npm run dev
-   ```
-
-3. **Type-check, build, and lint:**
-   ```bash
-   npm run build
-   npm run lint
-   ```
-
----
-
 ## Repository Map
 
 ```text
 .
 ├── DEMO_GUIDE.md                         # 2-minute stage script, demo flow & judge Q&A
-├── README.md                             # Project overview, architecture & setup
+├── README.md                             # Project overview, architecture & repository map
 ├── .env.example                          # Safe environment variable template
 ├── .cursor/mcp.json.example              # MCP server template (Supabase, Parallel, Cognee)
 ├── src/
@@ -150,3 +118,11 @@ flowchart TB
         ├── cognee-search/index.ts        # Cognee Cloud search over morning_lane_dwelly (50 cases)
         └── demo-call/index.ts            # Simulated UK lettings call & live fallback triage
 ```
+
+---
+
+## Hackathon Context & Security Note
+
+- **Hackathon:** Built for **Track 4 — Asset and Property Management** at the **Grok Bot Real Estate Hackathon London** (`EXL-1/Line-Inbox`). See [`DEMO_GUIDE.md`](./DEMO_GUIDE.md) for the 2-minute stage script and judge Q&A.
+- **Security & Secret Hygiene:** Runtime keys (`XAI_API_KEY`, `VAPI_WEBHOOK_SECRET`, `COGNEE_API_KEY`, `COGNEE_BASE_URL`) are loaded server-side via Supabase Vault (`line_runtime_secret`) or Edge Function secrets; `.env`, `.env.local`, `.cursor/mcp.json`, `data/`, and `backups/` are excluded from version control (`.env.example` and `.cursor/mcp.json.example` provide safe templates).
+
